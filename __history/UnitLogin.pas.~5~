@@ -21,7 +21,7 @@ type
     Image2: TImage;
     Label1: TLabel;
     Rectangle2: TRectangle;
-    edt_login_email: TEdit;
+    Edit1: TEdit;
   private
     { Private declarations }
   public

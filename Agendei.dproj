@@ -396,7 +396,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\..\..\Embarcadero\Studio\Projects\UnitLogin.pas">
+        <DCCReference Include="UnitLogin.pas">
             <Form>Form1</Form>
             <FormType>fmx</FormType>
         </DCCReference>
