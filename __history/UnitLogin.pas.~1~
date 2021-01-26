@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.TabControl,
-  FMX.Objects, FMX.Layouts, FMX.Controls.Presentation, FMX.StdCtrls, FMX.Edit;
+  FMX.Objects;
 
 type
   TForm1 = class(TForm)
@@ -15,13 +15,6 @@ type
     TabLogin: TTabItem;
     Rectangle1: TRectangle;
     Image1: TImage;
-    Layout1: TLayout;
-    Layout2: TLayout;
-    Layout3: TLayout;
-    Image2: TImage;
-    Label1: TLabel;
-    Rectangle2: TRectangle;
-    Edit1: TEdit;
   private
     { Private declarations }
   public
