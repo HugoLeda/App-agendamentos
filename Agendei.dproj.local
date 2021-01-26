@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2021/01/26 01:46:23.196,=C:\Users\João Mito.PESADON\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 01:48:19.586,C:\Users\João Mito.PESADON\Documents\Embarcadero\Studio\Projects\UnitLogin.fmx=C:\Users\João Mito.PESADON\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2021/01/26 01:48:19.586,C:\Users\João Mito.PESADON\Documents\Embarcadero\Studio\Projects\UnitLogin.pas=C:\Users\João Mito.PESADON\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/26 01:48:33.424,C:\Users\João Mito.PESADON\Documents\Embarcadero\Studio\Projects\Agendei.dproj=C:\Users\João Mito.PESADON\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/01/26 01:57:45.439,C:\Users\João Mito.PESADON\Documents\Informática\Projetos\App-agendamentos\Agendei.dproj=C:\Users\João Mito.PESADON\Documents\Embarcadero\Studio\Projects\Agendei.dproj</Transaction>
+  </Transactions>
+  <ActiveMobileDevice>   <NoProfile iOSSimulator="iPhone5"/>
+  </ActiveMobileDevice>
+</BorlandProject>
