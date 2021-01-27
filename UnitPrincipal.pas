@@ -28,7 +28,9 @@ type
     Label1: TLabel;
     Image6: TImage;
     lb_categorias: TListBox;
+    procedure FormShow(Sender: TObject);
   private
+    procedure CarregarCategorias(cidade: string);
     { Private declarations }
   public
     { Public declarations }
@@ -40,5 +42,38 @@ var
 implementation
 
 {$R *.fmx}
+
+uses UnitFrameCategoria;
+
+procedure TFrmPrincipal.CarregarCategorias(cidade: string);
+var
+  i: integer;
+  item: TListBoxItem;
+  frame: TFrameCategoria;
+begin
+  lb_categorias.Items.Clear;
+
+  //Acessar servidor e buscar categoria
+
+  for i := 1 to 9 do
+    begin
+      item := TListBoxItem.Create(lb_categorias);
+      item.Text := '';
+      item.Width := Trunc(lb_categorias.Width/ 3) - 3;
+      item.Height := 150;
+
+      frame := TFrameCategoria.Create(item);
+      frame.Parent := item;
+      frame.Align := TAlignLayout.Client;
+
+      lb_categorias.AddObject(item);
+    end;
+
+end;
+
+procedure TFrmPrincipal.FormShow(Sender: TObject);
+begin
+  CarregarCategorias('');
+end;
 
 end.
