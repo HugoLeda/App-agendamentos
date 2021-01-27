@@ -3,12 +3,15 @@ program Agendei;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  UnitLogin in 'UnitLogin.pas' {Form1};
+  UnitLogin in 'UnitLogin.pas' {FormLogin},
+  UnitPrincipal in 'UnitPrincipal.pas' {FrmPrincipal},
+  UnitFrameCategoria in 'UnitFrameCategoria.pas' {FrameCategoria: TFrame};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TFormLogin, FormLogin);
   Application.Run;
 end.

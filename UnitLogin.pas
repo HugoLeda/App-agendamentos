@@ -8,7 +8,7 @@ uses
   FMX.Objects, FMX.Layouts, FMX.Controls.Presentation, FMX.StdCtrls, FMX.Edit;
 
 type
-  TForm1 = class(TForm)
+  TFormLogin = class(TForm)
     TabControl1: TTabControl;
     TabInicial: TTabItem;
     Rectangle1: TRectangle;
@@ -20,9 +20,9 @@ type
     Label3: TLabel;
     Layout6: TLayout;
     Rectangle4: TRectangle;
-    Edit1: TEdit;
+    edt_conta_nome: TEdit;
     Rectangle5: TRectangle;
-    Edit2: TEdit;
+    edt_conta_senha: TEdit;
     Rectangle6: TRectangle;
     Label4: TLabel;
     TabLogin: TTabItem;
@@ -37,6 +37,8 @@ type
     edt_login_senha: TEdit;
     rect_btn_login: TRectangle;
     Label2: TLabel;
+    Rectangle7: TRectangle;
+    edt_conta_email: TEdit;
   private
     { Private declarations }
   public
@@ -44,7 +46,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FormLogin: TFormLogin;
 
 implementation
 
