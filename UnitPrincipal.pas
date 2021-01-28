@@ -6,16 +6,17 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
   FMX.Objects, FMX.TabControl, FMX.StdCtrls, FMX.Controls.Presentation, FMX.Edit,
-  FMX.ListBox;
+  FMX.ListBox, FMX.ListView.Types, FMX.ListView.Appearances,
+  FMX.ListView.Adapters.Base, FMX.ListView;
 
 type
   TFrmPrincipal = class(TForm)
     Layout1: TLayout;
-    Image1: TImage;
-    Image4: TImage;
-    Image2: TImage;
-    Image3: TImage;
-    TabControl1: TTabControl;
+    img_aba2: TImage;
+    img_aba1: TImage;
+    Img_aba3: TImage;
+    img_aba4: TImage;
+    TabControl: TTabControl;
     TabAba1: TTabItem;
     TabAba2: TTabItem;
     TabAba3: TTabItem;
@@ -28,9 +29,28 @@ type
     Label1: TLabel;
     Image6: TImage;
     lb_categorias: TListBox;
+    Layout3: TLayout;
+    Label2: TLabel;
+    img_exp_voltar: TImage;
+    Layout5: TLayout;
+    Label3: TLabel;
+    Layout6: TLayout;
+    Rectangle1: TRectangle;
+    Edit1: TEdit;
+    lv_explorar: TListView;
+    rect_buscar_exp: TRectangle;
+    Label4: TLabel;
+    Layout7: TLayout;
+    Label5: TLabel;
+    ListBox1: TListBox;
     procedure FormShow(Sender: TObject);
+    procedure img_aba4Click(Sender: TObject);
+    procedure FormResize(Sender: TObject);
+    procedure img_exp_voltarClick(Sender: TObject);
   private
     procedure CarregarCategorias(cidade: string);
+    procedure MudarAba(img: TImage);
+    procedure CarregarExplorar(cidade, termo: string);
     { Private declarations }
   public
     { Public declarations }
@@ -44,6 +64,40 @@ implementation
 {$R *.fmx}
 
 uses UnitFrameCategoria;
+
+procedure TFrmPrincipal.CarregarExplorar(cidade, termo: string);
+var
+  i: integer;
+begin
+  lv_explorar.Items.Clear;
+
+  //Acessar os dados do servidor
+
+  for i := 1 to 10 do
+    begin
+      with lv_explorar.Items.Add do
+        begin
+          Height := 100;
+          TagString := i.ToString;
+
+          TListItemText(Objects.FindDrawable('Txt_nome')).Text := 'Clínica ' + i.ToString;
+          TListItemText(Objects.FindDrawable('Txt_endereco')).Text := 'R: Avenida, 08 ' + sLineBreak +
+                                                                      'Jardim - Fartura' + sLineBreak +
+                                                                      '(14) 00000-0000';
+        end;
+    end;
+end;
+
+procedure TFrmPrincipal.MudarAba(img: TImage);
+begin
+  img_aba1.Opacity := 0.4;
+  img_aba2.Opacity := 0.4;
+  img_aba3.Opacity := 0.4;
+  img_aba4.Opacity := 0.4;
+
+  img.Opacity := 1;
+  TabControl.GoToVisibleTab(img.Tag, TTabTransition.Slide);
+end;
 
 procedure TFrmPrincipal.CarregarCategorias(cidade: string);
 var
@@ -59,7 +113,7 @@ begin
     begin
       item := TListBoxItem.Create(lb_categorias);
       item.Text := '';
-      item.Width := Trunc(lb_categorias.Width/ 3) - 3;
+      item.Width := 105;
       item.Height := 150;
 
       frame := TFrameCategoria.Create(item);
@@ -71,9 +125,26 @@ begin
 
 end;
 
+procedure TFrmPrincipal.FormResize(Sender: TObject);
+begin
+  lb_categorias.Columns := Trunc(lb_categorias.Width / 105);
+end;
+
 procedure TFrmPrincipal.FormShow(Sender: TObject);
 begin
+  TabControl.ActiveTab := TabAba1;
   CarregarCategorias('');
+  CarregarExplorar('', '');
+end;
+
+procedure TFrmPrincipal.img_aba4Click(Sender: TObject);
+begin
+  MudarAba(TImage(Sender));
+end;
+
+procedure TFrmPrincipal.img_exp_voltarClick(Sender: TObject);
+begin
+  MudarAba(img_aba1);
 end;
 
 end.
