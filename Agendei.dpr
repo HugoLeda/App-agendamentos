@@ -5,7 +5,8 @@ uses
   FMX.Forms,
   UnitLogin in 'UnitLogin.pas' {FormLogin},
   UnitPrincipal in 'UnitPrincipal.pas' {FrmPrincipal},
-  UnitFrameCategoria in 'UnitFrameCategoria.pas' {FrameCategoria: TFrame};
+  UnitFrameCategoria in 'UnitFrameCategoria.pas' {FrameCategoria: TFrame},
+  UnitFrameAgendamento in 'UnitFrameAgendamento.pas' {FrameAgendamento: TFrame};
 
 {$R *.res}
 

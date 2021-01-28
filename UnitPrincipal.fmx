@@ -836,6 +836,7 @@ object FrmPrincipal: TFrmPrincipal
         Size.PlatformDefault = False
         StyleLookup = 'transparentlistboxstyle'
         TabOrder = 2
+        ShowScrollBars = False
         Columns = 3
         DisableFocusEffect = True
         DefaultItemStyles.ItemStyle = ''
@@ -1099,13 +1100,14 @@ object FrmPrincipal: TFrmPrincipal
           TabOrder = 0
         end
       end
-      object ListBox1: TListBox
+      object lb_agendamentos: TListBox
         Align = Client
         Size.Width = 340.000000000000000000
         Size.Height = 410.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = 'transparentlistboxstyle'
         TabOrder = 2
+        ShowScrollBars = False
         DisableFocusEffect = True
         DefaultItemStyles.ItemStyle = ''
         DefaultItemStyles.GroupHeaderStyle = ''

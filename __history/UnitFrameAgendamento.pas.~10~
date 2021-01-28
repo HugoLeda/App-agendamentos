@@ -1,0 +1,31 @@
+unit UnitFrameAgendamento;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Layouts, FMX.Objects;
+
+type
+  TFrameAgendamento = class(TFrame)
+    lbl_servico: TLabel;
+    Label1: TLabel;
+    Layout1: TLayout;
+    Image1: TImage;
+    Label2: TLabel;
+    Image2: TImage;
+    Label3: TLabel;
+    Image3: TImage;
+    Label4: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+implementation
+
+{$R *.fmx}
+
+end.

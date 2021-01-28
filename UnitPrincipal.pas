@@ -42,7 +42,7 @@ type
     Label4: TLabel;
     Layout7: TLayout;
     Label5: TLabel;
-    ListBox1: TListBox;
+    lb_agendamentos: TListBox;
     procedure FormShow(Sender: TObject);
     procedure img_aba4Click(Sender: TObject);
     procedure FormResize(Sender: TObject);
@@ -51,6 +51,7 @@ type
     procedure CarregarCategorias(cidade: string);
     procedure MudarAba(img: TImage);
     procedure CarregarExplorar(cidade, termo: string);
+    procedure CarregarAgendamentos;
     { Private declarations }
   public
     { Public declarations }
@@ -63,7 +64,7 @@ implementation
 
 {$R *.fmx}
 
-uses UnitFrameCategoria;
+uses UnitFrameCategoria, UnitFrameAgendamento;
 
 procedure TFrmPrincipal.CarregarExplorar(cidade, termo: string);
 var
@@ -97,6 +98,31 @@ begin
 
   img.Opacity := 1;
   TabControl.GoToVisibleTab(img.Tag, TTabTransition.Slide);
+end;
+
+procedure TFrmPrincipal.CarregarAgendamentos;
+var
+  i: integer;
+  item: TListBoxItem;
+  frame: TFrameAgendamento;
+begin
+  lb_agendamentos.Items.Clear;
+
+  //Acessar servidor e buscar categoria
+
+  for i := 1 to 5 do
+    begin
+      item := TListBoxItem.Create(lb_agendamentos);
+      item.Text := '';
+      item.Height := 250;
+
+      frame := TFrameAgendamento.Create(item);
+      frame.Parent := item;
+      frame.Align := TAlignLayout.Client;
+
+      lb_agendamentos.AddObject(item);
+    end;
+
 end;
 
 procedure TFrmPrincipal.CarregarCategorias(cidade: string);
@@ -134,6 +160,7 @@ procedure TFrmPrincipal.FormShow(Sender: TObject);
 begin
   TabControl.ActiveTab := TabAba1;
   CarregarCategorias('');
+  CarregarAgendamentos;
   CarregarExplorar('', '');
 end;
 

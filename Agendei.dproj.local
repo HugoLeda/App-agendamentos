@@ -14,6 +14,9 @@
     <Transaction>2021/01/27 11:28:31.000.560,=C:\Users\João Mito.PESADON\Documents\Informática\Projetos\App-agendamentos\Unit1.pas</Transaction>
     <Transaction>2021/01/27 11:28:55.000.636,C:\Users\João Mito.PESADON\Documents\Informática\Projetos\App-agendamentos\Unit1.pas=C:\Users\João Mito.PESADON\Documents\Informática\Projetos\App-agendamentos\UnitFrameCategoria.pas</Transaction>
     <Transaction>2021/01/27 11:28:55.000.636,C:\Users\João Mito.PESADON\Documents\Informática\Projetos\App-agendamentos\Unit1.fmx=C:\Users\João Mito.PESADON\Documents\Informática\Projetos\App-agendamentos\UnitFrameCategoria.fmx</Transaction>
+    <Transaction>2021/01/27 23:17:09.782,=C:\Users\João Mito.PESADON\Documents\Informática\Projetos\App-agendamentos\Unit1.pas</Transaction>
+    <Transaction>2021/01/27 23:17:30.109,C:\Users\João Mito.PESADON\Documents\Informática\Projetos\App-agendamentos\UnitFrameAgendamento.pas=C:\Users\João Mito.PESADON\Documents\Informática\Projetos\App-agendamentos\Unit1.pas</Transaction>
+    <Transaction>2021/01/27 23:17:30.109,C:\Users\João Mito.PESADON\Documents\Informática\Projetos\App-agendamentos\UnitFrameAgendamento.fmx=C:\Users\João Mito.PESADON\Documents\Informática\Projetos\App-agendamentos\Unit1.fmx</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<NoProfile iOSSimulator="iPhone5"/>
