@@ -8,35 +8,35 @@ uses
   FMX.Objects, FMX.Layouts, FMX.Controls.Presentation, FMX.StdCtrls, FMX.Edit;
 
 type
-  TFormLogin = class(TForm)
+  TFrmLogin = class(TForm)
     TabControl1: TTabControl;
     TabInicial: TTabItem;
+    TabLogin: TTabItem;
+    TabNovaConta: TTabItem;
     Rectangle1: TRectangle;
     Image1: TImage;
-    TabNovaConta: TTabItem;
-    Layout4: TLayout;
-    Image3: TImage;
-    Layout5: TLayout;
-    Label3: TLabel;
-    Layout6: TLayout;
-    Rectangle4: TRectangle;
-    edt_conta_nome: TEdit;
-    Rectangle5: TRectangle;
-    edt_conta_senha: TEdit;
-    Rectangle6: TRectangle;
-    Label4: TLabel;
-    TabLogin: TTabItem;
     Layout1: TLayout;
-    Image2: TImage;
     Layout2: TLayout;
-    Label1: TLabel;
     Layout3: TLayout;
+    Image2: TImage;
+    Label1: TLabel;
     Rectangle2: TRectangle;
     edt_login_email: TEdit;
     Rectangle3: TRectangle;
     edt_login_senha: TEdit;
     rect_btn_login: TRectangle;
     Label2: TLabel;
+    Layout4: TLayout;
+    Image3: TImage;
+    Layout5: TLayout;
+    Rectangle4: TRectangle;
+    edt_conta_nome: TEdit;
+    Rectangle5: TRectangle;
+    edt_conta_senha: TEdit;
+    Rectangle6: TRectangle;
+    Label3: TLabel;
+    Layout6: TLayout;
+    Label4: TLabel;
     Rectangle7: TRectangle;
     edt_conta_email: TEdit;
   private
@@ -46,7 +46,7 @@ type
   end;
 
 var
-  FormLogin: TFormLogin;
+  FrmLogin: TFrmLogin;
 
 implementation
 

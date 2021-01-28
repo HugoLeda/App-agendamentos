@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Controls.Presentation, FMX.Layouts, FMX.Objects;
+  FMX.Controls.Presentation, FMX.Objects, FMX.Layouts;
 
 type
   TFrameAgendamento = class(TFrame)
@@ -14,8 +14,8 @@ type
     Layout1: TLayout;
     Image1: TImage;
     lbl_data: TLabel;
-    Image2: TImage;
     lbl_hora: TLabel;
+    Image2: TImage;
     Image3: TImage;
     lbl_valor: TLabel;
     Layout2: TLayout;
@@ -26,6 +26,7 @@ type
     Label6: TLabel;
     rect_excluir: TRectangle;
     Label7: TLabel;
+    Line1: TLine;
   private
     { Private declarations }
   public
