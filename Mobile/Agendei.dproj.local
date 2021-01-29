@@ -37,7 +37,7 @@
     <Transaction>2021/01/23 20:14:50.000.102,=D:\99Coders\Lancamento 11\CPL\CPL3\Fontes\Units\uCustomCalendar.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile Android="" iOSSimulator="iPhone5" Android64=""/>
+		<NoProfile Android="Emulador_Nexus_7" iOSSimulator="iPhone5" Android64="Emulador_Nexus_7"/>
 		<PMACANDREA iOSSimulator="iPhone5"/>
 		<PMacBook iOSSimulator="iPhone5"/>
 		<PMacVirtual iOSSimulator="iPhone5"/>

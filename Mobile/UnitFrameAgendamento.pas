@@ -22,8 +22,6 @@ type
     Image4: TImage;
     lbl_endereco: TLabel;
     Layout3: TLayout;
-    rect_reagendar: TRectangle;
-    Label6: TLabel;
     rect_excluir: TRectangle;
     Label7: TLabel;
     Line1: TLine;

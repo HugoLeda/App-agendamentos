@@ -16,8 +16,8 @@ uses
 
 begin
   Application.Initialize;
-  Application.CreateForm(TFrmLogin, FrmLogin);
   Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TFrmLogin, FrmLogin);
   Application.CreateForm(TFrmDetalheEmpresa, FrmDetalheEmpresa);
   Application.CreateForm(TFrmAgenda, FrmAgenda);
   Application.Run;
