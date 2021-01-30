@@ -9,7 +9,7 @@ uses
 
 type
   TFrmLogin = class(TForm)
-    TabControl1: TTabControl;
+    TabControl: TTabControl;
     TabInicial: TTabItem;
     TabLogin: TTabItem;
     TabNovaConta: TTabItem;
@@ -39,6 +39,9 @@ type
     Label4: TLabel;
     Rectangle7: TRectangle;
     edt_conta_email: TEdit;
+    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure rect_btn_loginClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,5 +54,49 @@ var
 implementation
 
 {$R *.fmx}
+
+uses UnitDM, UnitPrincipal;
+
+procedure TFrmLogin.FormCreate(Sender: TObject);
+begin
+    TabControl.ActiveTab := TabInicial;
+
+    // Configurar endereco no meu SERVIDOR...
+    {$IFDEF DEBUG}
+    //dm.RESTClient.BaseURL := 'http://192.168.0.50:8082';  // Para testar no Android, coloque p IP do seu PC
+    dm.RESTClient.BaseURL := 'http://localhost:8082';
+    {$ELSE}
+    dm.RESTClient.BaseURL := 'https://seu-site-oficial:8082';
+    {$ENDIF}
+end;
+
+procedure TFrmLogin.FormShow(Sender: TObject);
+begin
+    TabControl.GotoVisibleTab(1, TTabTransition.Slide);
+end;
+
+procedure TFrmLogin.rect_btn_loginClick(Sender: TObject);
+var
+    erro : string;
+    id_usuario: integer;
+begin
+    if NOT dm.ValidaLogin(edt_login_email.Text,
+                          edt_login_senha.Text,
+                          id_usuario,
+                          erro) then
+    begin
+        showmessage(erro);
+        exit;
+    end;
+
+    // Abrir o form principal...
+    if NOT Assigned(FrmPrincipal) then
+        Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+
+    FrmPrincipal.id_usuario_global := id_usuario;
+    FrmPrincipal.Show;
+    Application.MainForm := FrmPrincipal;
+    FrmLogin.Close;
+end;
 
 end.

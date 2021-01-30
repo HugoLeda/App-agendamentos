@@ -13,7 +13,6 @@ object dm: Tdm
     Events = <
       item
         Routes = [crAll]
-        NeedAuthorization = True
         DWParams = <
           item
             TypeObject = toParam
@@ -31,13 +30,10 @@ object dm: Tdm
           end>
         JsonMode = jmPureJSON
         Name = 'login'
-        EventName = 'login'
-        OnlyPreDefinedParams = False
         OnReplyEventByType = EventsUsuarioEventsloginReplyEventByType
       end
       item
         Routes = [crAll]
-        NeedAuthorization = True
         DWParams = <
           item
             TypeObject = toParam
@@ -69,8 +65,6 @@ object dm: Tdm
           end>
         JsonMode = jmPureJSON
         Name = 'cadastro'
-        EventName = 'cadastro'
-        OnlyPreDefinedParams = False
         OnReplyEventByType = EventsUsuarioEventscadastroReplyEventByType
       end>
     ContextName = 'usuario'
@@ -82,7 +76,6 @@ object dm: Tdm
     Events = <
       item
         Routes = [crAll]
-        NeedAuthorization = True
         DWParams = <
           item
             TypeObject = toParam
@@ -93,8 +86,6 @@ object dm: Tdm
           end>
         JsonMode = jmPureJSON
         Name = 'listar'
-        EventName = 'listar'
-        OnlyPreDefinedParams = False
         OnReplyEventByType = EventsCategoriaEventslistarReplyEventByType
       end>
     ContextName = 'categoria'
@@ -106,7 +97,6 @@ object dm: Tdm
     Events = <
       item
         Routes = [crAll]
-        NeedAuthorization = True
         DWParams = <
           item
             TypeObject = toParam
@@ -135,11 +125,16 @@ object dm: Tdm
             ObjectValue = ovString
             ParamName = 'id_empresa'
             Encoded = True
+          end
+          item
+            TypeObject = toParam
+            ObjectDirection = odIN
+            ObjectValue = ovString
+            ParamName = 'id_categoria'
+            Encoded = True
           end>
         JsonMode = jmPureJSON
         Name = 'listar'
-        EventName = 'listar'
-        OnlyPreDefinedParams = False
         OnReplyEventByType = EventsEmpresaEventslistarReplyEventByType
       end>
     ContextName = 'empresa'
@@ -151,7 +146,6 @@ object dm: Tdm
     Events = <
       item
         Routes = [crAll]
-        NeedAuthorization = True
         DWParams = <
           item
             TypeObject = toParam
@@ -162,13 +156,10 @@ object dm: Tdm
           end>
         JsonMode = jmPureJSON
         Name = 'listar'
-        EventName = 'listar'
-        OnlyPreDefinedParams = False
         OnReplyEventByType = EventsServicoEventslistarReplyEventByType
       end
       item
         Routes = [crAll]
-        NeedAuthorization = True
         DWParams = <
           item
             TypeObject = toParam
@@ -186,13 +177,10 @@ object dm: Tdm
           end>
         JsonMode = jmPureJSON
         Name = 'horario'
-        EventName = 'horario'
-        OnlyPreDefinedParams = False
         OnReplyEventByType = EventsServicoEventshorarioReplyEventByType
       end
       item
         Routes = [crAll]
-        NeedAuthorization = True
         DWParams = <
           item
             TypeObject = toParam
@@ -224,8 +212,6 @@ object dm: Tdm
           end>
         JsonMode = jmPureJSON
         Name = 'agendar'
-        EventName = 'agendar'
-        OnlyPreDefinedParams = False
         OnReplyEventByType = EventsServicoEventsagendarReplyEventByType
       end>
     ContextName = 'servico'
@@ -243,7 +229,6 @@ object dm: Tdm
     Events = <
       item
         Routes = [crAll]
-        NeedAuthorization = True
         DWParams = <
           item
             TypeObject = toParam
@@ -254,12 +239,29 @@ object dm: Tdm
           end>
         JsonMode = jmPureJSON
         Name = 'listar'
-        EventName = 'listar'
-        OnlyPreDefinedParams = False
         OnReplyEventByType = EventsReservaEventslistarReplyEventByType
+      end
+      item
+        Routes = [crAll]
+        DWParams = <
+          item
+            TypeObject = toParam
+            ObjectDirection = odIN
+            ObjectValue = ovString
+            ParamName = 'id_reserva'
+            Encoded = True
+          end>
+        JsonMode = jmPureJSON
+        Name = 'excluir'
+        OnReplyEventByType = EventsReservaEventsexcluirReplyEventByType
       end>
     ContextName = 'reserva'
     Left = 272
     Top = 256
+  end
+  object QryEmpresa: TFDQuery
+    Connection = conn
+    Left = 64
+    Top = 336
   end
 end
