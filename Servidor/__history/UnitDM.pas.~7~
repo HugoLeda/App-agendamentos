@@ -649,7 +649,7 @@ begin
     dm.conn.Params.Values['DriverID'] := 'FB';
     dm.conn.Params.Values['Database'] := 'C:\Users\João Mito.PESADON\Documents\Informática\Projetos\App-agendamentos\Servidor\DB\BANCO.FDB';
     dm.conn.Params.Values['User_Name'] := 'SYSDBA';
-    dm.conn.Params.Values['Password'] := '040303';
+    dm.conn.Params.Values['Password'] := 'masterkey';
     dm.conn.Connected := true;
 end;
 
