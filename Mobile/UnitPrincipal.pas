@@ -70,6 +70,8 @@ type
     procedure lb_categoriasItemClick(const Sender: TCustomListBox;
       const Item: TListBoxItem);
     procedure rect_buscarClick(Sender: TObject);
+    procedure lv_explorarUpdateObjects(const Sender: TObject;
+      const AItem: TListViewItem);
   private
     procedure CarregarCategorias(cidade: string);
     procedure MudarAba(img: TImage);
@@ -329,6 +331,13 @@ begin
     end);
 
     jsonArray.DisposeOf;
+end;
+
+procedure TFrmPrincipal.lv_explorarUpdateObjects(const Sender: TObject;
+  const AItem: TListViewItem);
+begin
+    TListItemText(AItem.Objects.FindDrawable('Txt_nome')).Font.Size := 13;
+    TListItemText(AItem.Objects.FindDrawable('Txt_endereco')).Font.Size := 13;
 end;
 
 end.

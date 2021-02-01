@@ -13,7 +13,8 @@ uses
   uCustomCalendar in 'Units\uCustomCalendar.pas',
   UnitDM in 'UnitDM.pas' {dm: TDataModule},
   uFunctions in 'Units\uFunctions.pas',
-  UnitConfirmacao in 'UnitConfirmacao.pas' {FrmConfirmacao};
+  UnitConfirmacao in 'UnitConfirmacao.pas' {FrmConfirmacao},
+  uLoading in 'Units\uLoading.pas';
 
 {$R *.res}
 

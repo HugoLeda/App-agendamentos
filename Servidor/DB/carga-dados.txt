@@ -41,6 +41,37 @@ VALUES('Clínica Cardio', 'Av. Santo Amaro, 5600', 'Brooklin', 'São Paulo',
 
 INSERT INTO TAB_EMPRESA (NOME, ENDERECO, BAIRRO, CIDADE,
                         ESTADO, FONE, ID_CATEGORIA, FOTO)
+VALUES('Clínica São João', 'Av. São João, 520', 'Brooklin', 'São Paulo',
+'SP', '(11) 5555-5555', 1, null);
+
+INSERT INTO TAB_EMPRESA (NOME, ENDERECO, BAIRRO, CIDADE,
+                        ESTADO, FONE, ID_CATEGORIA, FOTO)
+VALUES('Clínica Medial', 'Av. Brasil, 999', 'Brooklin', 'São Paulo',
+'SP', '(11) 5555-5555', 1, null);
+
+INSERT INTO TAB_EMPRESA (NOME, ENDERECO, BAIRRO, CIDADE,
+                        ESTADO, FONE, ID_CATEGORIA, FOTO)
+VALUES('Clínica Saúde', 'Av. da Saúde, 663', 'Brooklin', 'São Paulo',
+'SP', '(11) 5555-5555', 1, null);
+
+INSERT INTO TAB_EMPRESA (NOME, ENDERECO, BAIRRO, CIDADE,
+                        ESTADO, FONE, ID_CATEGORIA, FOTO)
+VALUES('Clínica Incor', 'Rua Ipê, 414', 'Brooklin', 'São Paulo',
+'SP', '(11) 5555-5555', 1, null);
+
+INSERT INTO TAB_EMPRESA (NOME, ENDERECO, BAIRRO, CIDADE,
+                        ESTADO, FONE, ID_CATEGORIA, FOTO)
+VALUES('Clínica MedMais', 'Rua do Algodão, 98', 'Brooklin', 'São Paulo',
+'SP', '(11) 5555-5555', 1, null);
+
+
+
+
+
+
+
+INSERT INTO TAB_EMPRESA (NOME, ENDERECO, BAIRRO, CIDADE,
+                        ESTADO, FONE, ID_CATEGORIA, FOTO)
 VALUES('Consultório Dental', 'Av. Interlagos, 582', 'Interlagos', 'São Paulo',
 'SP', '(11) 2222-2222', 2, null);
 
